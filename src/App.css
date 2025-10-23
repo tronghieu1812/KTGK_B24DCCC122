@@ -1,0 +1,264 @@
+/* ===== Reset + Cấu hình chung ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+  background-color: #f5f6fa;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+
+/* ===== Navbar đẹp chuẩn blog ===== */
+.navbar {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 40px;
+  border-radius: 10px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  margin-bottom: 25px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.navbar-logo {
+  width: 35px;
+  height: 35px;
+}
+
+.navbar-title {
+  font-size: 1.6rem;
+  color: #222;
+  font-weight: 700;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #4c2fb0;
+  font-weight: 600;
+  transition: all 0.25s ease;
+  padding: 4px 6px;
+  border-radius: 5px;
+}
+
+.nav-link:hover {
+  background-color: #ede6ff;
+  color: #7a4cff;
+}
+
+.active {
+  color: #7a4cff;
+  border-bottom: 2px solid #7a4cff;
+}
+
+.divider {
+  color: #aaa;
+  font-weight: 300;
+}
+
+/* ===== Tiêu đề trang ===== */
+h2.page-title {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #222;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+h2.page-title span {
+  color: #7a4cff;
+}
+
+/* ===== Input, Button ===== */
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.25s;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: #7a4cff;
+  box-shadow: 0 0 5px rgba(122, 76, 255, 0.2);
+}
+
+button {
+  background-color: #7a4cff;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.25s;
+}
+
+button:hover {
+  background-color: #693bdb;
+}
+
+button.secondary {
+  background-color: #e0e0e0;
+  color: #333;
+}
+
+button.secondary:hover {
+  background-color: #ccc;
+}
+
+/* ===== Form container ===== */
+.form-container {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* ===== Danh sách bài viết ===== */
+.post-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.post-list-header input {
+  flex: 1;
+  max-width: 300px;
+}
+
+/* ===== Card bài viết ===== */
+.post-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.post-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.post-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.post-card-content {
+  padding: 15px;
+}
+
+.post-card h3 {
+  margin-bottom: 8px;
+  color: #222;
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.post-desc {
+  color: #444;
+  margin-bottom: 15px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+/* ===== Chi tiết bài viết ===== */
+.post-detail {
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.post-detail img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.post-detail h2 {
+  margin-bottom: 10px;
+}
+
+.post-detail .meta {
+  color: #777;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 20px;
+  }
+
+  .navbar-title {
+    font-size: 1.4rem;
+  }
+
+  .post-grid {
+    grid-template-columns: 1fr;
+  }
+
+  button {
+    width: 100%;
+  }
+}
